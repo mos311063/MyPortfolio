@@ -23,6 +23,7 @@ body {
 .page-grid-container {
   display: grid;
   width: 100%;
+  max-width: 100%;
   height: auto;
   grid-template-rows: 60px 1fr;
   font-size: 1em;
