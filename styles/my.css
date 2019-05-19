@@ -32,7 +32,7 @@ body {
 .ubuntu {
   font-family: var(--Ubuntu-font);
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   color: black;
 }
 .nova {
@@ -86,7 +86,7 @@ body {
   font-size: -webkit-calc(1.4em + 5vmin);
   font-size: -moz-calc(1.4em + 5vmin);
   font-family: var(--Nova-font);
-  width: 50%;
+  width: 80%;
   top: 40%;
   mix-blend-mode: normal;
   backdrop-filter: blur(4px);
@@ -97,25 +97,27 @@ body {
   display: flex;
   justify-content: center;
   justify-self: center;
-  font-size: calc(0.75em + 2vmin);
-  font-size: -webkit-calc(0.75em + 2vmin);
-  font-size: -moz-calc(0.75em + 2vmin);
+  font-size: calc(0.50em + 3vmin);
+  font-size: -webkit-calc(0.50em + 3vmin);
+  font-size: -moz-calc(0.50em + 3vmin);
   width: 90%;
   top: 70%;
+  font-weight: bold;
 }
 .about-container {
   position: relative;
   display: grid;
   background-color: var(--bg-color-about);
   width: 100%;
-  height: 980px;
+  height: 110%;
+  grid-template-rows: 80px 200px auto 1fr;
 }
 .about-h1 {
   position: relative;
   display: flex;
   justify-self: flex-end;
+  align-self: center;
   font-size: 1.3em;
-  top: 10%;
   right: 5%;
 }
 
@@ -123,22 +125,30 @@ body {
   position: relative;
   display: flex;
   justify-self: flex-start;
+  align-self: center;
   font-size: 1.2em;
   left: 2%;
 }
 
 .about-p {
-  position: relative;
   display: flex;
   justify-self: center;
   font-size: 0.9em;
   width: 90%;
 }
 .about-slogan {
-  position: absolute;
   display: flex;
-  font-size: 1em;
-  bottom: 5%;
+  text-align: end;
+  font-size: 1.5em;
+  justify-self: flex-end;
+  align-self: center;
+  justify-content: center;
+  margin-right: 5%;
+  width: 50%;
+  background: var(--bg-color-body);
 }
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 400px) {
+  html{
+    font-size: 0.9em;
+  }
 }
