@@ -80,14 +80,13 @@ body {
   position: absolute;
   display: flex;
   justify-content: center;
-  align-content: center;
+  justify-self: center;
   color: white;
   font-size: calc(1.4em + 5vmin);
   font-size: -webkit-calc(1.4em + 5vmin);
   font-size: -moz-calc(1.4em + 5vmin);
   font-family: var(--Nova-font);
-  width: 100%;
-  margin: 0 auto;
+  width: 50%;
   top: 40%;
   mix-blend-mode: normal;
   backdrop-filter: blur(4px);
@@ -97,11 +96,11 @@ body {
   position: absolute;
   display: flex;
   justify-content: center;
-  align-content: center;
+  justify-self: center;
   font-size: calc(0.75em + 2vmin);
   font-size: -webkit-calc(0.75em + 2vmin);
   font-size: -moz-calc(0.75em + 2vmin);
-  width: 100%;
+  width: 90%;
   top: 70%;
 }
 .about-container {
@@ -133,7 +132,6 @@ body {
   display: flex;
   justify-self: center;
   font-size: 0.9em;
-
   width: 90%;
 }
 .about-slogan {
