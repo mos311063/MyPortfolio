@@ -102,7 +102,6 @@ body {
   font-size: -webkit-calc(0.75em + 2vmin);
   font-size: -moz-calc(0.75em + 2vmin);
   width: 100%;
-  margin: 0 auto;
   top: 70%;
 }
 .about-container {
