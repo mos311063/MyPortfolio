@@ -254,19 +254,17 @@ body {
 }
 
 .slides::-webkit-scrollbar {
-  width: 1em;
-  height: 1em;
+  width: 10px;
+  height: 10px;
   -webkit-overflow-scrolling: auto; /*mobile fix*/
-  visibility: visible;
+  z-index: 1;
 }
 .slides::-webkit-scrollbar-thumb {
   background: var(--bg-color-main3);
   border-radius: 5px;
-  visibility: visible;
 }
 .slides::-webkit-scrollbar-track {
   background: var(--bg-color-main4);
-  visibility: visible;
 }
 .slider-index {
   position: absolute;
