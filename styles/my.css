@@ -204,10 +204,10 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: auto; /*mobile fix*/
 }
 .slides > div {
   position: relative;
@@ -254,10 +254,8 @@ body {
 }
 
 .slides::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  -webkit-overflow-scrolling: auto; /*mobile fix*/
-  z-index: 1;
+  width: 1em;
+  height: 1em;
 }
 .slides::-webkit-scrollbar-thumb {
   background: var(--bg-color-main3);
