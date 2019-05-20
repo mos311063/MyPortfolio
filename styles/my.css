@@ -243,10 +243,11 @@ body {
   padding-right: 1em;
   text-decoration: none;
   font-size: 0.8em;
-  font-weight: bold;
+  font-weight: 600;
 }
 .project-link:hover {
-  color: black;
+  visibility: visible;
+  opacity: 0.8;
 }
 .project-link:visited {
   color: inherit;
@@ -256,13 +257,16 @@ body {
   width: 1em;
   height: 1em;
   -webkit-overflow-scrolling: auto; /*mobile fix*/
+  visibility: visible;
 }
 .slides::-webkit-scrollbar-thumb {
   background: var(--bg-color-main3);
   border-radius: 5px;
+  visibility: visible;
 }
 .slides::-webkit-scrollbar-track {
   background: var(--bg-color-main4);
+  visibility: visible;
 }
 .slider-index {
   position: absolute;
