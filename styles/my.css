@@ -59,7 +59,7 @@ body {
   height: 100%;
   min-height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh 100vh 100vh;
+  grid-template-rows: 100vh 1fr;
 }
 /*end main*/
 /*landing*/
@@ -147,7 +147,7 @@ body {
 .about-p {
   display: flex;
   justify-self: center;
-  font-size: 0.8em;
+  font-size: 0.75em;
   width: 90%;
 }
 .about-slogan {
@@ -255,6 +255,7 @@ body {
 .slides::-webkit-scrollbar {
   width: 1em;
   height: 1em;
+  -webkit-overflow-scrolling: auto; /*mobile fix*/
 }
 .slides::-webkit-scrollbar-thumb {
   background: var(--bg-color-main3);
@@ -271,10 +272,12 @@ body {
   bottom: 0;
   width: 100%;
   pointer-events: none;
+  touch-action: none;
 }
 .slider-index > p {
   pointer-events: none;
+  touch-action: none; /*mobile fix*/
   z-index: 1;
-  font-size: 0.7em;
+  font-size: 0.75em;
   color: black;
 }
