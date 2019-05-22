@@ -1,5 +1,5 @@
-/*global*/
 @import url(https://fonts.googleapis.com/css?family=Nova+Mono);
+/*global*/
 * {
   margin: 0;
   padding: 0;
@@ -58,18 +58,31 @@ body {
 textarea {
   resize: none;
 }
+
+blink {
+  animation: blink 4s steps(10, start) infinite;
+  -webkit-animation: blink 4s steps(10, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
 /*end global*/
 /*nav*/
 .nav-container {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--bg-color-nav);
-  box-sizing: border-box;
-  z-index: 100;
-  opacity: 1;
+  z-index: 1;
 }
-nav {
+.nav-wrap {
   max-width: 1800px;
   margin: 0 auto;
   display: grid;
@@ -83,8 +96,8 @@ nav {
   height: 100%;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   width: auto;
+  background-color: var(--bg-color-nav);
 }
 .logo img {
   grid-column: 2;
@@ -99,13 +112,10 @@ nav {
   max-height: 100%;
 }
 
-#nav-toggle {
-  display: none;
-}
 .left-menu {
   display: flex;
-  box-sizing: border-box;
   grid-column: 1;
+  background: var(--bg-color-nav);
 }
 .left-menu li {
   box-sizing: border-box;
@@ -113,27 +123,22 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.burger-menu {
-  display: none;
-}
-
-nav a {
-  color: white;
+.nav-wrap a {
+  color: whitesmoke;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  transition: 0.3s all ease-in-out;
+  font-family: var(--Ubuntu-font);
 }
-nav a:hover {
-  opacity: 0.7;
-  background-color: white;
+.nav-wrap a:hover {
+  opacity: 1;
+  background-color: whitesmoke;
   color: black;
   font-weight: bold;
 }
-nav a:focus {
+.nav-wrap a:focus {
   opacity: 0.7;
 }
-nav a:active {
+.nav-wrap a:active {
   opacity: 0.7;
   color: black;
 }
@@ -147,45 +152,84 @@ nav a:active {
   padding: 1em 1em;
   align-items: center;
 }
+.burger-menu {
+  display: none;
+  background: var(--bg-color-nav);
+}
+#nav-toggle {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
+  /*nav for small screen */
+  .nav-wrap {
+    grid-template-columns: 1fr 8fr;
+  }
   .burger-menu {
-    display: flex;
-    box-sizing: border-box;
-    width: 80px;
     grid-column: 1;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background: var(--bg-color-nav);
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    cursor: pointer;
   }
   .burger-menu:hover {
-    background: #3c3c3c;
+    background: #545454;
     opacity: 0.8;
   }
   .left-menu {
-    display: none;
-  }
-  #nav-toggle:checked ~ .left-menu {
     display: grid;
     grid-row: 2;
     grid-column: span 3;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+  #nav-toggle:checked ~ .left-menu {
+    opacity: 1;
+    visibility: visible;
     width: 100%;
     height: 100%;
+    transition: opacity 0.7s;
+    transition: height 0.7s;
   }
   .left-menu li {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 100%;
-    width: 100%;
+    height: 0;
   }
-  .left-menu a {
-    display: flex;
-    width: 100%;
+  #nav-toggle:checked ~ .left-menu li {
     height: 100%;
-    font-size: 0.5em;
-    font-weight: 300;
+    transition: height 1s;
   }
-}
-
+  .left-menu li a {
+    opacity: 0;
+    visibility: hidden;
+  }
+  #nav-toggle:checked ~ .left-menu li a {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  .left-menu li a:active ~ .left-menu {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .left-menu li a:active ~ .left-menu li {
+    height: 0;
+  }
+  .left-menu li a:active ~ .left-menu li {
+    opacity: 0;
+    visibility: hidden;
+  }
+} /*end media query*/
 /*end nav*/
+
 /*main*/
 .main-container {
   position: absolute;
@@ -301,14 +345,16 @@ nav a:active {
 .about-slogan {
   display: flex;
   text-align: end;
-  font-size: 1.3em;
+  font-size: 1em;
   justify-self: center;
   align-self: center;
   justify-content: flex-end;
   width: 80%;
+  max-height: 80%;
 }
 .about-slogan span {
-  width: 60%;
+  width: 80%;
+  max-height: 80%;
   background: var(--bg-color-body);
 }
 /*end about*/
@@ -326,7 +372,7 @@ nav a:active {
   position: relative;
   display: grid;
   width: 95%;
-  max-width: calc(1000px + 4vmax);
+  max-width: calc(1000px + 4vmax); /*max width of project*/
   height: 100%;
   min-height: 100vh;
   grid-template-rows: 2.7em auto 0.5em;
@@ -367,19 +413,26 @@ nav a:active {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  font-size: 1rem;
 }
 .slides > div {
   position: relative;
   display: grid;
   margin-right: 0.5em;
-  flex-shrink: 0; /*shrink each item to it fit it parent*/
+  flex-shrink: 0; /* disable shrink so it content to go over parent define width*/
   scroll-snap-align: start; /*snap point*/
   width: 100%;
   height: 100%;
   background-color: var(--bg-color-main2);
-  font-size: 1rem;
+  font-size: 1em;
   grid-template-columns: 1fr 1fr auto;
-  grid-template-rows: 3em 1fr 2em;
+  grid-template-rows: 3em 1fr 1.5em 1em; /*last 1em to deal with scroll on native ios*/
+  box-sizing: border-box;
+  border-top-right-radius: 10%;
+  border-top-left-radius: 10%;
+  border-left: 0.3em solid var(--bg-color-main4);
+  border-right: 0.3em solid var(--bg-color-main4);
+  border-top: 0.2em solid var(--bg-color-main3);
 }
 .project-h2 {
   grid-column: span 3;
@@ -388,7 +441,55 @@ nav a:active {
   background: var(--bg-color-main4);
   width: 95%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
 }
+
+.slides > div:not(:first-child) .project-h2::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f30a'; /*arrow right icon*/
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  opacity: 1;
+  color: var(--bg-color-main3);
+  animation: blink 1.5s steps(8, start) infinite;
+  -webkit-animation: blink 1.5s steps(8, start) infinite;
+}
+
+.slides > div:first-child .project-h2::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f30a'; /*arrow right icon*/
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  opacity: 0;
+  color: var(--bg-color-main3);
+}
+
+.slides > div:not(:last-child) .project-h2::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f30b'; /*arrow right icon*/
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  opacity: 1;
+  color: var(--bg-color-main3);
+  animation: blink 1.5s steps(8, start) infinite;
+  -webkit-animation: blink 1.5s steps(8, start) infinite;
+}
+
+.slides > div:last-child .project-h2::after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f30b'; /*arrow right icon*/
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  opacity: 0;
+  color: var(--bg-color-main3);
+}
+
 .project-p {
   grid-column: span 3;
   text-align: left;
@@ -398,22 +499,27 @@ nav a:active {
 }
 .project-link {
   grid-column: 3;
-  display: inline-block;
-  height: 1.3em;
-  text-align: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: 600;
-  margin-right: 5%;
   box-sizing: border-box;
+  margin-right: 5%;
 }
-.project-link::before {
-  content: '> ';
+.project-link:hover::before {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f0da'; /*arrow right icon*/
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  font-weight: bold;
+  color: var(--bg-color-main3);
 }
-.project-link:hover {
-  visibility: visible;
-  opacity: 0.8;
-}
+
 .project-link:visited {
   color: inherit;
 }
@@ -521,19 +627,19 @@ nav a:active {
   position: absolute;
   top: 0.1em;
   pointer-events: none;
-  padding-left: 0.125rem;
+  padding-left: 0.4em;
   z-index: 1;
   color: #b3b3b3;
   font-size: 0.5em;
   font-weight: bold;
   font-family: var(--Quicksand-font);
-  -webkit-transition: all 0.28s ease;
-  transition: all 0.28s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .form-input .bar {
   position: relative;
   display: block;
-  border-bottom: 0.0625rem solid #999;
+  border-bottom: 0.05em solid #999;
   width: 60%;
   margin: 0 auto;
 }
@@ -579,7 +685,7 @@ nav a:active {
 .form-input textarea:focus ~ .form-label,
 .form-input textarea:valid ~ .form-label {
   font-size: 0.8rem;
-  color: gray;
+  font-weight: bolder;
   top: -1rem;
   left: 0;
 }
