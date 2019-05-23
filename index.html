@@ -46,7 +46,7 @@
     <div class="nav-container">
       <nav class="nav-wrap">
         <div class="dropdown">
-          <a href="" role="none" tabindex="0" class="menu-icon">
+          <a role="navigation" class="menu-icon" href="#">
             <i class="fas fa-caret-down"></i>
           </a>
           <div class="left-menu">
@@ -55,13 +55,18 @@
             <li><a href="#project">Project</a></li>
             <li><a href="#contact">Contact</a></li>
           </div>
+          <a role="button" class="menu-icon-close" href="#">
+            <i class="fas fa-caret-up"></i>
+          </a>
         </div>
         <a href="index.html" class="logo">
           <img src="./images/icon.svg" alt="" /> ardkasem</a
         >
       </nav>
     </div>
-    <div class="main-container">
+    <!--end nav-->
+    <div class="main-container" onclick="void(0)">
+      <!--hack closeing hover-->
       <div class="landing-container" id="home">
         <div class="bg-main-1"></div>
         <div class="bg-main-2"></div>
@@ -70,7 +75,9 @@
         <p class="name">Kardkasem</p>
         <p class="slogan ubuntu">I design app and make it work.</p>
       </div>
-      <div class="about-wrapper" id="about">
+
+      <section id="about"></section>
+      <div class="about-wrapper">
         <div class="about-container">
           <p class="about-h1 nova">#about me</p>
           <p class="about-h2 ubuntu">“HELLO ? me : amatuer developer”</p>
@@ -88,16 +95,17 @@
             I am also a fan of pretty coding and make it so it can be readable
             and easy to maintain.
             <br /><br />
-            apart from my coding life I enjoy playing guitar, spending time
-            travel around the world with my friend.
+            apart from my coding life I enjoy playing guitar, badminton, cooking
+            and travel around to new place with my friend and famiy.
           </p>
           <div class="about-slogan ubuntu">
-            <span>“Simple yet Effective”</span>
+            <span></span>
           </div>
         </div>
       </div>
       <!--end about-->
-      <div class="project-wrapper" id="project">
+      <section id="project"></section>
+      <div class="project-wrapper">
         <div class="project-container">
           <p class="project-h1 nova">#project</p>
           <div class="project-slider-wrap">
@@ -154,7 +162,8 @@
         </div>
       </div>
       <!-- end project-->
-      <div class="contact-wrapper" id="contact">
+      <section id="contact"></section>
+      <div class="contact-wrapper">
         <div class="contact-container">
           <p class="contact-h1 nova">#contact me</p>
           <div class="form-wrapper">
