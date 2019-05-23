@@ -55,7 +55,7 @@ body {
   color: black;
 }
 textarea {
-  resize: none;
+  resize: none; /*disable txtarea corner resize*/
 }
 
 @keyframes blink {
@@ -90,9 +90,19 @@ textarea {
     height: 80%;
   }
 }
-.project-container:hover {
-  opacity: 1;
+
+@keyframes drop2 {
+  0% {
+    height: 90%;
+  }
+  50% {
+    height: 95%;
+  }
+  100% {
+    height: 100%;
+  }
 }
+
 /*end global*/
 
 /*nav*/
@@ -608,24 +618,36 @@ textarea {
 .slider-index {
   position: absolute;
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* = div it display*/
+  grid-template-columns: repeat(5, 1fr); /* = div project num to display*/
   align-content: center;
   bottom: 0;
   width: 100%;
-  pointer-events: none;
 }
 .slider-index > p {
-  pointer-events: none;
   font-size: 0.75em;
   color: black;
-  z-index: 1;
 }
+.slider-index > p a {
+  color: inherit;
+  text-decoration: none;
+  display: block; /* so it cover all of element*/
+  width: 100%;
+  height: 100%;
+}
+.slider-index > p a:active {
+  background: #f2865b;
+  border-radius: 5px;
+}
+.slides > div:target {
+  animation: drop2 0.7s normal 1 ease-in-out;
+  -webkit-animation: drop2 0.7s normal 1 ease-in-out;
+}
+
 /*mobile slider*/
 .slider-index > span {
   /*fixed for mobile as overflow-touch force native scroll */
   display: none;
   grid-column: 1/-1;
-  pointer-events: none;
   font-size: 0.7em;
   color: black;
   z-index: 1;
@@ -633,6 +655,7 @@ textarea {
 @media only screen and (max-width: 600px) {
   .slider-index > span {
     display: block;
+    pointer-events: none;
     background: var(--bg-color-main4);
   }
   .slider-index > p {
@@ -789,6 +812,7 @@ textarea {
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
+  cursor: pointer;
 }
 
 .form-button button:active {
