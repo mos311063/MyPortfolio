@@ -285,29 +285,15 @@ textarea {
 
 /*nav pointer*/
 /*1.2 em is the size of nav*/
-#about {
-  position: absolute;
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  top: calc(100% - 1.2em);
-}
-#project {
-  position: absolute;
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  top: calc(200% - 1.2em);
-}
+#about,
+#project,
 #contact {
   position: absolute;
   width: 0;
   height: 0;
   visibility: hidden;
   opacity: 0;
-  top: calc(300% - 1.2em);
+  top: -1.2em;
 }
 /*end pointer*/
 
