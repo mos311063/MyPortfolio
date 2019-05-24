@@ -371,6 +371,71 @@ textarea {
   font-weight: bold;
 }
 /* end landing*/
+/*bio*/
+.bio-wrapper {
+  position: relative;
+  background-color: var(--bg-color-body);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-top: 0.5em solid var(--bg-color-main1);
+}
+.bio-container {
+  position: relative;
+  display: grid;
+  width: 90%;
+  max-width: calc(700px + 4vmax);
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5em auto 0.5em;
+  box-sizing: border-box;
+  font-size: 1em;
+  align-content: center;
+  grid-gap: 0.5em;
+}
+
+.bio-container .bio-profile {
+  grid-row: 2;
+  display: grid;
+  font-size: 0.7em;
+  width: 100%;
+  justify-self: center;
+  justify-content: center;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto;
+  grid-row-gap: 0.5em;
+}
+
+.bio-container .bio-skill {
+  grid-row: 2;
+  display: grid;
+  font-size: 0.7em;
+  width: 100%;
+  justify-self: center;
+  justify-content: center;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: auto 1fr;
+  grid-row-gap: 0.5em;
+}
+
+.bio-skill li {
+  grid-column: 1;
+}
+
+.bio-profile h3,
+.bio-skill h3 {
+  background: var(--bg-color-main1);
+}
+.gauge {
+  display: flex;
+  grid-column: 2;
+  margin-left: 10px;
+  background: var(--bg-color-main3);
+}
+
 /*about*/
 
 .about-wrapper {
@@ -381,6 +446,8 @@ textarea {
   height: 100%;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  border-bottom: 0.5em solid var(--bg-color-main1);
 }
 .about-container {
   position: relative;
@@ -706,6 +773,7 @@ textarea {
   display: grid;
   width: 90%;
   min-height: 80%;
+  max-height: 97%;
   max-width: 800px;
   border-radius: 40px;
   grid-template-rows: auto 1fr auto;
