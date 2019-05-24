@@ -293,7 +293,7 @@ textarea {
 /*end nav*/
 
 /*nav pointer*/
-/*1.2 em is the size of nav*/
+
 #about,
 #project,
 #contact {
@@ -302,7 +302,7 @@ textarea {
   height: 0;
   visibility: hidden;
   opacity: 0;
-  top: -1.2em;
+  top: -1.2em; /*1.2 em is the size of nav*/
 }
 /*end pointer*/
 
@@ -504,7 +504,7 @@ textarea {
   font-size: 1em;
   grid-template-columns: 1fr 1fr auto;
   grid-template-rows: 3em 1fr 1.5em 1em; /*last 1em to deal with scroll on native ios*/
-  box-sizing: border-box;
+  box-sizing: border-box; /* need to avoid mess up when adding margin and padding*/
   border-top-right-radius: 10%;
   border-top-left-radius: 10%;
   border-left: 0.3em solid var(--bg-color-main4);
@@ -626,6 +626,8 @@ textarea {
 .slider-index > p {
   font-size: 0.75em;
   color: black;
+  z-index: 1; /*bring it in front of div */
+  background: #edce7979; /*hack fix*/
 }
 .slider-index > p a {
   color: inherit;
@@ -814,7 +816,10 @@ textarea {
   font-size: 0.8em;
   cursor: pointer;
 }
-
+.form-button button:hover {
+  background: #f4cb5c62;
+  border: 1px solid var(--bg-color-main4);
+}
 .form-button button:active {
   background: #f8d470;
   border: 1px solid var(--bg-color-main4);
