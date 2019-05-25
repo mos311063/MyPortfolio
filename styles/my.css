@@ -154,7 +154,7 @@ textarea {
   max-width: 1800px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 1fr 0.45fr;
 }
 .logo {
   grid-column: 2;
