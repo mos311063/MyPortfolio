@@ -4,20 +4,25 @@
 
 "welcome to my first portfolio showcase. siteis using pure html and css. this portfolio is done as part of assignment at coder academy(Melbourne)."
 
-- deploy-site : https://kardkasem.netlify.com
+<strong>site status</strong>
+
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/03dc03f9-7c1d-495d-93c1-fc627581c9dd/deploy-status)](https://app.netlify.com/sites/kardkasem/deploys)
+
+- deploy-site-url : https://kardkasem.netlify.com
+
 - github : https://github.com/mos311063
 
 ---
 
 ## Description && Purpose
 
-this portfolio is done as part of assignment at coder academy(Melbourne). it purpose is to give information about me and also serve as show case for my project and my ability.
+This portfolio is done as part of assignment at coder academy(Melbourne). it purpose is to give information about me and also serve as show case for my project and my ability.
 
 
 ## Target Audience
 
 I hope my portfolio is able to deliver information about me and deliver some sort of design and coding skill to impress employer.
-I also hope it inspire any developer out there or could be use as an example for designing responsive website to anyone.
+I also hope it could give an inspiration any developer out there or so that it could be use as an example for designing responsive website to anyone.
 
 ## Functionality
 
