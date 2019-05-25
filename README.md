@@ -1,6 +1,6 @@
 # Portfolio | Kardkasem
 
-<a href = https://github.com/mos311063 ><img src="https://avatars1.githubusercontent.com/u/40424027?s=400&v=4" width="48"> </a>
+<a href = https://github.com/mos311063 ><img src="https://avatars1.githubusercontent.com/u/40424027?s=400&v=4" width="80"> </a>
 
 "welcome to my first portfolio showcase. siteis using pure html and css. this portfolio is done as part of assignment at coder academy(Melbourne)."
 
@@ -28,7 +28,8 @@ I also hope it inspire any developer out there or could be use as an example for
 ## Tech Stack
 
   this project was coded using pure HTML5 and CSS3 
-  - design : pastel design with flex and
+  - design : pastel design
+  - responsive : yes thank to flex and grid display, calc() , @media ;
   - it deployed : the site is store in github and deploy via netlify.
   - contact form : via Formspree API site.
 
