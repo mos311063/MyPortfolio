@@ -56,15 +56,17 @@ all the section is accessible via nav bar at the top.
 
 <br>
 
+## Design inspire
+the design was inspire by when my educator was introduce previos portfolio for past students and most of them are in dark or plain color which inspire me to do something diffrent and since then I decide that I want my portfolio to me consist of colorful component. 
+
+ ![design](./docs/design.png)
 
 ## Design
 
 when I first design this portfolio. I really have no idea what to do, but thank to Figma. this is my first time using Figma and I was blown away by its features and how well it works. I help me so much on design process which i consider myself really bad.
 
-## Design inspire
-the design was inspire by when my educator was introduce previos portfolio for past students and most of them are in dark or plain color which inspire me to do something diffrent and since then I decide that I want my portfolio to me consist of colorful component. 
+![design](./docs/figma.png)
 
- ![design](./docs/design.png)
 
 ### Color Selection
 I want my site to be colorful but also reable and not too much bright and hurt user eye and from that I decide to  made it look pastel, giving a user a soft, neutral, soothing feeling.
