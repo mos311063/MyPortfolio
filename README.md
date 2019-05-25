@@ -129,6 +129,8 @@ I use trello to note what I need to do orderly and what aspect is require by edu
 
 ![1](./docs/contact.png)
 
+![1](./docs/mobile.png)
+
 ---
 
 ### Short Answer 
