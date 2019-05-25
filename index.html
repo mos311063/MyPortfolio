@@ -2,16 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
   <!--favicon-->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
-  <!-- For apple devices -->
 
+  <!-- favicon apple devices -->
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
   <link rel="mask-icon" href="./images/safari-pinned-tab.svg" color="#393939" />
+
+  <!--favicon other -->
+  <link rel="manifest" href=" ./images/site.webmanifest">
+  <link rel="shortcut icon" href=" ./images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#393939">
+  <meta name="msapplication-config" content=" ./images/browserconfig.xml">
+  <meta name="theme-color" content="#393939">
+
   <!--style-->
   <link rel="stylesheet" href="./styles/my.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -19,6 +25,10 @@
   <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet" />
+  <!--meta-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Kardkasem Saenyen</title>
   <meta name="description"
     content="My first portfolio showcase using pure html and css. this portfolio is done as part of assignment at coder academy(Melbourne)." />
@@ -34,6 +44,7 @@
 </head>
 
 <body>
+  <!--nav-->
   <div class="nav-container">
     <nav class="nav-wrap">
       <div class="dropdown">
@@ -56,6 +67,8 @@
     </nav>
   </div>
   <!--end nav-->
+
+  <!--main-->
   <div class="main-container" onclick="void(0)">
     <!--hack closeing hover-->
     <div class="landing-container" id="home">
@@ -84,12 +97,12 @@
           </li>
           <li>
             <h4>
-              <i class="fas fa-address-book"></i> contact-number : <a href="tel:0414306479">0414306479</a>
+              <i class="fas fa-address-book"></i> tel: <a href="tel:0414306479">0414306479</a>
             </h4>
           </li>
           <li>
             <h4>
-              <i class="fas fa-envelope"></i> email : mos311063@hotmail.com
+              <i class="fas fa-envelope"></i> email :<a href="mailto:mos311063@hotmail.com"> mos311063@hotmail.com</a>
             </h4>
           </li>
           <li>
@@ -178,7 +191,7 @@
           and easy to maintain.
           <br /><br />
           apart from my coding life I enjoy playing guitar, badminton, cooking
-          and travel around to new place with my friend and famiy.
+          and travel around to new place.
         </p>
         <div class="about-history quicksand">
           <span class="ubuntu">Education history</span>
@@ -306,6 +319,7 @@
       </div>
     </div>
     <!--end form-->
+    <!--footer-->
     <div class="footer-wrap">
       <div class="footer-container">
         <span><i class="fab fa-yelp"></i>follow me on</span>
@@ -315,6 +329,7 @@
         </a>
       </div>
     </div>
+    <!--end footer-->
   </div>
 </body>
 

@@ -62,7 +62,7 @@ body {
   color: black;
 }
 textarea {
-  resize: none; /*disable txtarea corner resize*/
+  resize: none; /*disable textarea corner resize*/
 }
 
 @keyframes blink {
@@ -551,7 +551,7 @@ textarea {
   display: flex;
   justify-self: center;
   align-self: center;
-  font-size: 0.7em;
+  font-size: 0.65em;
   width: 95%;
 }
 .about-history {
@@ -578,7 +578,7 @@ textarea {
 .about-history > ul > li {
   display: grid;
   grid-template-columns: 3fr 7fr;
-  font-size: 0.7em;
+  font-size: 0.65em;
   margin-top: 0.4em;
   margin-bottom: 0.3em;
 }
@@ -591,7 +591,7 @@ textarea {
 
 .about-history > ul p {
   margin-top: 1em;
-  font-size: 0.6em;
+  font-size: 0.65em;
 }
 /*end about*/
 /*project*/
