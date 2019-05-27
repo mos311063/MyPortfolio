@@ -684,7 +684,7 @@ textarea {
 
 .slides > div:not(:first-child) .project-h2::before {
   font-family: 'Font Awesome 5 Free';
-  content: '\f30a'; /*arrow right icon*/
+  content: '\f30a'; /*arrow left icon*/
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
@@ -696,7 +696,7 @@ textarea {
 
 .slides > div:first-child .project-h2::before {
   font-family: 'Font Awesome 5 Free';
-  content: '\f30a'; /*arrow right icon*/
+  content: '\f30a'; /*arrow left icon*/
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
@@ -921,12 +921,9 @@ textarea {
   line-height: 1.9;
   width: 100%;
   color: transparent;
-  -webkit-transition: all 0.28s ease;
-  transition: all 0.28s ease;
   box-shadow: none;
 }
 
-.form-input select,
 .form-input input:focus,
 .form-input input:valid,
 .form-input textarea:focus,
@@ -934,7 +931,7 @@ textarea {
   color: black;
   outline: none;
 }
-.form-input select ~ .form-label,
+
 .form-input input:focus ~ .form-label,
 .form-input input:valid ~ .form-label,
 .form-input textarea:focus ~ .form-label,
@@ -943,10 +940,11 @@ textarea {
   font-weight: bolder;
   top: -1rem;
   left: 0;
+  color: black
 }
 .form-input input:focus ~ .form-label,
 .form-input textarea:focus ~ .form-label {
-  color: black; /*overide for focus color*/
+  color: #393939; /*color when focus */
 }
 
 .form-input input:focus ~ .bar::before,

@@ -117,8 +117,9 @@ I use trello to note what I need to do orderly and what aspect is require by edu
 
 ### Future Enhancements
 - adding javascript to the page.
-- I would like nav to be from bottom of page.
-- custom domain
+- I would like to move nav to the bottom of page.
+- improve performance
+- to made a custom domain instead .netlify
 
 
 ## Screenshot
