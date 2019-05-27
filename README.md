@@ -1,10 +1,10 @@
 # Portfolio | Kardkasem
 
-<a href = https://github.com/mos311063 ><img src="https://avatars1.githubusercontent.com/u/40424027?s=400&v=4" width="80"> </a>
+<a href = https://github.com/mos311063 ><img src="https://avatars1.githubusercontent.com/u/40424027?s=400&v=4" width="100"> </a>
 
-"welcome to my first portfolio showcase. siteis using pure html and css. this portfolio is done as part of assignment at coder academy(Melbourne)."
+Welcome to my first portfolio showcase. this portfolio is done as part of assignment at coder academy(Melbourne). the site has been made using pure html and css.
 
-<strong>site status</strong>
+<strong>deploy-site-status</strong>
 
   [![Netlify Status](https://api.netlify.com/api/v1/badges/03dc03f9-7c1d-495d-93c1-fc627581c9dd/deploy-status)](https://app.netlify.com/sites/kardkasem/deploys)
 
@@ -16,7 +16,7 @@
 
 ## Description && Purpose
 
-This portfolio is done as part of assignment at coder academy(Melbourne). it purpose is to give information about me and also serve as show case for my project and my ability.
+This portfolio is done as part of assignment at coder academy(Melbourne). it mainly purpose is to give information about me and also serve as show case for my project and my ability.
 
 
 ## Target Audience
@@ -26,15 +26,15 @@ I also hope it could give an inspiration any developer out there or so that it c
 
 ## Functionality
 
-- it code using only html and css therefore it is the fast on load.
-- it design is fully responsive (all as much as I could make it possible).
-- it can view in both major web browser and mobile.
+- it code using only html and css therefore it it is fast and will working on most major browser
+- it design is fully responsive (as much as I could make it possible).
+- it can view in both desktop and mobile devices.
 
 ## Tech Stack
 
   this project was coded using pure HTML5 and CSS3 
   - design : pastel design
-  - responsive : yes thank to flex and grid display, calc() , @media ;
+  - responsive : yes it is fully responsive and tested
   - it deployed : the site is store in github and deploy via netlify.
   - contact form : via Formspree API site.
 
@@ -68,13 +68,13 @@ the design was inspire by when my educator was introduce previos portfolio for p
 
 ## Design
 
-when I first design this portfolio. I really have no idea what to do, but thank to Figma. this is my first time using Figma and I was blown away by its features and how well it works. I help me so much on design process which i consider myself really bad.
+when I first design this portfolio. I really have no idea what to do, but thank to Figma!! eventhough it is my first time using Figma, I was blown away by its features and how well it works. it help me so much on design process to go smooth and deliver this outcome.
 
 ![design](./docs/figma.png)
 
 
 ### Color Selection
-I want my site to be colorful but also reable and not too much bright and hurt user eye and from that I decide to  made it look pastel, giving a user a soft, neutral, soothing feeling.
+I want my site to be colorful but also readable and not too much bright and hurt user eye and from that I decide to made it look pastel. I aim to giving a user a soft, neutral, soothing feeling when browse my site.
 
 my site consist of 4 main color which is
  - ![#bfd8d2](https://placehold.it/15/bfd8d2/000000?text=+) #bfd8d2
