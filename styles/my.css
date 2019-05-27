@@ -692,7 +692,7 @@ textarea {
   background-color: var(--bg-color-main2);
   font-size: 1em;
   grid-template-columns: 1fr 1fr auto;
-  grid-template-rows: 3em 1fr 1.5em 0.5em; /*last 0.5em to deal with scroll on native ios*/
+  grid-template-rows: 3em 1fr 1.5em 1em; /*last 0.5em to deal with scroll on native ios*/
   box-sizing: border-box; /* need to avoid mess up when adding margin and padding*/
   border-top-right-radius: 10%;
   border-top-left-radius: 10%;
@@ -832,11 +832,11 @@ textarea {
   background: #f2865b;
   border-radius: 5px;
 }
-
 .slides > div:target {
   animation: drop2 0.7s normal 1 ease-in-out;
   -webkit-animation: drop2 0.7s normal 1 ease-in-out;
 }
+
 
 /*mobile slider*/
 .slider-index > span {
