@@ -10,6 +10,8 @@ Welcome to my first portfolio showcase. this portfolio is done as part of assign
 
 - deploy-site-url : https://kardkasem.netlify.com
 
+- deploy-resever-url : https://mos311063.github.io/MyPortfolio/
+
 - github : https://github.com/mos311063
 
 ---
