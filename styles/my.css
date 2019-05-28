@@ -451,7 +451,6 @@ textarea {
   align-items: center;
   box-sizing: border-box;
   border-top: 0.5em solid var(--bg-color-main1);
-  border-bottom: 0.5em solid var(--bg-color-main1);
 }
 .bio-container {
   position: relative;
@@ -503,12 +502,14 @@ textarea {
 .bio-profile h3,
 .bio-skill h3 {
   background: var(--bg-color-main1);
+  border-radius: 2px;
 }
 .gauge {
   display: flex;
   grid-column: span 2;
   justify-content: flex-end;
   color: whitesmoke;
+  border-radius: 5px;
 }
 .gauge.yellow {
   width: 50%;
@@ -532,8 +533,12 @@ textarea {
   background: rgb(203, 202, 202);
   animation: bar 2s normal 1 ease-in-out;
   -webkit-animation: bar 2s normal 1 ease-in-out;
+  border-radius: 5px;
 }
 
+.bio-container i {
+  color: var(--bg-color-nav);
+}
 /*about*/
 
 .about-wrapper {
