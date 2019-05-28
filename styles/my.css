@@ -681,7 +681,6 @@ textarea {
 .slides > div {
   position: relative;
   display: grid;
-  overflow-y: auto;
   margin-right: 0.5em;
   flex-shrink: 0; /* disable shrink so it content to go over parent define width*/
   scroll-snap-align: start; /*snap point*/
